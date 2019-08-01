@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+form {
+    text-align: left;
+    margin: 10px;
+    padding: 5%;
+   
+}
+
+.bttn {
+    margin-top: 18px;
+    margin-left: 5px;
+    width: 70px;
+    height: 35px;
+    font-size: 15px;
+}
+input{
+    margin-top: 18px;
+    margin-left: 5px;
+    width: 145px;
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+
+}
