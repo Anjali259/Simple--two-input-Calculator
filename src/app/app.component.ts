@@ -24,7 +24,8 @@ export class AppComponent {
   }
   onDivision() {
     this.displayname = true;
-    this.result = this.num1 / this.num2;
+    var result= parseFloat((this.num1/this.num2).toFixed(2));
+    this.result = result;
   }
 
   onMultiplication() {
