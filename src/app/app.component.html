@@ -15,10 +15,14 @@
       <button class="form-group btn btn-success bttn" (click)="onSubtraction()"> - </button>
       <button class="form-group btn btn-success bttn" (click)="onDivision()"> / </button>
       <button class="form-group btn btn-success bttn" (click)="onMultiplication()"> * </button>
+      <button class="form-group btn btn-success bttn" (click)="reverse(num1)"> Reverse </button> 
     </div>
 
     <div *ngIf="displayname">
       Result of {{num1}} and {{num2}} <input disabled value="{{result}}">
+    </div>
+    <div *ngIf="displayreverse">
+      Reverse of {{num1}} is <input disabled value="{{result}}">
     </div>
 
     <!--  <h4 *ngIf="displaysum">The sum of {{num1}} and {{num2}} is {{sum}}. </h4>

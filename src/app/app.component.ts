@@ -11,6 +11,7 @@ export class AppComponent {
   num2: number;
   public result: number;
   public displayname: boolean;
+  public displayreverse: boolean;
 
   onAddition() {
     this.displayname = true;
@@ -24,7 +25,7 @@ export class AppComponent {
   }
   onDivision() {
     this.displayname = true;
-    var result= parseFloat((this.num1/this.num2).toFixed(2));
+    var result = parseFloat((this.num1 / this.num2).toFixed(2));
     this.result = result;
   }
 
@@ -34,6 +35,24 @@ export class AppComponent {
   }
   clear() {
     this.displayname = false;
+    this.displayreverse = false;
     this.num1 = this.num2 = null;
   }
+ 
+  reverse(num) { // number = 2345
+    this.displayreverse = true;
+    let str = num.toString(); // converted number to string
+    let r = '';
+    for (var i = str.length - 1; i >= 0; i--)  
+    // Initially i will be 3 (string length is 4 (number is 2345) - 1) 
+    {
+      r = r + str[i]; //so str[i] = str[3] = 5 from (number = 2345) reverse
+      console.log(r);
+    }
+    return this.result = parseInt(r);
+
+  }
+
 }
+
+
