@@ -39,11 +39,15 @@ export class AppComponent {
   clear() {
     this.displayname = false;
     this.displayreverse = false;
+    this.displaycombine = false;
     this.num1 = this.num2 = null;
   }
 
   reverse(num) { // number = 2345
     this.displayreverse = true;
+    this.displaycombine = false;
+    this.displayname = false;
+
     let str = num.toString(); // converted number to string
     let r = '';
     for (var i = str.length - 1; i >= 0; i--)
@@ -56,7 +60,9 @@ export class AppComponent {
   }
 
   combinenum(str) {
-   
+    this.displaycombine = true;
+    this.displayreverse = false;
+    this.displayname = false;
     let num = str.toString();
     let result = [];
     let r1 = '';
@@ -66,6 +72,7 @@ export class AppComponent {
     this.displaycombine = true;
     // Since you only want pairs, there's no reason
     // to iterate over the last element directly
+    if(num!=null){
     for (let i = 0; i < num.length - 1; i++) {
       // This is where you'll capture that last value
       for (let j = i + 1; j < num.length; j++) {
@@ -75,10 +82,10 @@ export class AppComponent {
         r4 = parseInt(r2);
         result.push(r3);
         result.push(r4);
-          
-         }
+        }
     }
-    alert(result);
+  }
+    // alert(result);
     return  this.results = result;
     
     
