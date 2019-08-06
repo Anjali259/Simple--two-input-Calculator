@@ -10,6 +10,7 @@ export class AppComponent {
   num1: number;
   num2: number;
   public result: number;
+  results: any[];
   public combineresult: number;
   public displayname: boolean;
   public displayreverse: boolean;
@@ -78,6 +79,7 @@ export class AppComponent {
          }
     }
     alert(result);
+    return  this.results = result;
     
     
   }
